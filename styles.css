@@ -1,0 +1,50 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* patientItem */
+.patient {
+    display: flex;
+    flex-flow: column;
+    height: 100px;
+    width: 100px;
+    padding: 13px;
+    border-radius: 5%;
+    margin: 20px;
+    -webkit-box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
+    -moz-box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
+    box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
+}
+
+.content{
+    height: 310px;
+}
+
+.main-block {
+    margin-bottom: 10px;
+}
+
+.specialty {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 12px;
+    color:grey;
+}
+
+.gender {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.hasCovid {
+    height: 20px;
+    width: 20px;
+}
+
+
