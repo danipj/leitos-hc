@@ -1,0 +1,30 @@
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+.overlay-content {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 15%;
+  cursor: default;
+
+}
+
+@media(max-width: 1024px){
+  .overlay-content {
+    display: block;
+    padding-top: 60px;
+  }
+}

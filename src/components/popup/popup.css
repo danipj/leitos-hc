@@ -1,0 +1,35 @@
+.popup-container {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.popup-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popup-btn {
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  width: 103px;
+  text-align: center;
+}
+.confirm-btn {
+  color: white;
+  background-color: green;
+}
+.confirm-btn:hover {
+  background-color: darkgreen;
+}
+.close-btn {
+  color: white;
+  background-color: red;
+  margin-left: auto;
+}
+.close-btn:hover {
+  background-color: darkred;
+}

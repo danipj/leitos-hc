@@ -6,25 +6,30 @@
 }
 
 /* patientItem */
-.patient {
+.card {
     display: flex;
     flex-flow: column;
-    height: 100px;
-    width: 100px;
-    padding: 13px;
-    border-radius: 5%;
+    width: '90%';
+    padding: 10px;
+    border-radius: 10px;
     margin: 20px;
     -webkit-box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
     -moz-box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
     box-shadow: -1px 3px 2px 0px rgba(181,170,181,1);
+    background-color: white;
 }
 
-.content{
-    height: 310px;
+.hcid {
+  margin-left: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-block {
-    margin-bottom: 10px;
+    display: flex;
 }
 
 .specialty {
@@ -37,6 +42,15 @@
     color:grey;
 }
 
+.key {
+  font-weight: bold;
+}
+
+.value {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
 .gender {
     font-weight: bold;
     font-size: 12px;
@@ -47,4 +61,55 @@
     width: 20px;
 }
 
+.patients {
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow: scroll;
+  padding: 10px;
+}
 
+.beds {
+  flex-grow: 3;
+  max-height: 100vh;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.bed-id-block {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bed-info {
+  margin-bottom: 10px;
+}
+
+.alert-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 25px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.bed-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #eee;
+}
