@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-import Row from "./components/Row";
+import PatientColumn from "./components/PatientColumn";
+import CustomNavbar from "./components/CustomNavbar";
+import BedMap from "./components/BedMap";
 
-class MainPage extends Component { // should talk to redux, get info from backend, etc
+class MainPage extends Component {
   constructor() {
     super();
   }
 
   render() {
     return (
-    <div>
-     WAITING: <Row status="waiting"/>
-      MOVING: <Row status="moving"/>
-      DONE: <Row status="done"/>
-    </div>
+      <React.Fragment>
+        <CustomNavbar />
+        <PatientColumn />
+        <BedMap />
+      </React.Fragment>
     );
   }
 }
