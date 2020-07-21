@@ -63,14 +63,14 @@
 
 .patients {
   flex-grow: 1;
-  max-height: 100vh;
   overflow: scroll;
+  max-height: 97vh; /*talvez seja bom alterar isso daqui*/
   padding: 10px;
 }
 
 .beds {
   flex-grow: 3;
-  max-height: 100vh;
+  max-height: 97vh; /*talvez seja bom alterar isso daqui*/
   overflow: scroll;
   padding: 10px;
 }

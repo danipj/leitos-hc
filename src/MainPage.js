@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import CustomNavbar from "./components/CustomNavbar";
 import PatientItem from './components/PatientItem';
 import BedItem from './components/BedItem';
 import Popup from './components/popup';
+
 
 const beds = [
   {
@@ -108,39 +110,42 @@ function MainPage(props){
   }
 
   return(
-    <div className='main'>
-      <Popup
-        confirmText={'Confirmar'}
-        closeText={'Cancelar'}
-        confirmBtn={true}
-        isOpen={showAlert}
-        setDisplayPopup={(value) => setShowAlert(value)}
-        message={message}
-        onConfirm={() => {setShowAlert(false); setSelectedPatient(null)}}
-        onClose={() => setShowAlert(false)}
-      />
-      <div className='patients'>
-        <span className='section-title'>Pacientes aguardando leito</span>
-        {
-          patients.map((patient, index) => (
-            <PatientItem
-              patient={patient}
-              index={index}
-              isSelected={selectedPatient == index}
-              onPatientClick={() => handlePatientClick(index)}
-            />
-          ))
-        }
+    <>
+      <CustomNavbar />
+      <div className='main'>
+        <Popup
+          confirmText={'Confirmar'}
+          closeText={'Cancelar'}
+          confirmBtn={true}
+          isOpen={showAlert}
+          setDisplayPopup={(value) => setShowAlert(value)}
+          message={message}
+          onConfirm={() => {setShowAlert(false); setSelectedPatient(null)}}
+          onClose={() => setShowAlert(false)}
+        />
+        <div className='patients'>
+          <span className='section-title'>Pacientes aguardando leito</span>
+          {
+            patients.map((patient, index) => (
+              <PatientItem
+                patient={patient}
+                index={index}
+                isSelected={selectedPatient == index}
+                onPatientClick={() => handlePatientClick(index)}
+              />
+            ))
+          }
+        </div>
+        <div className='beds'>
+          <span className='section-title'>Leitos disponíveis</span>
+          {
+            beds.map(bed => (
+              <BedItem bed={bed} onBedClick={() => handleBedClick(bed)}/>
+            ))
+          }
+        </div>
       </div>
-      <div className='beds'>
-        <span className='section-title'>Leitos disponíveis</span>
-        {
-          beds.map(bed => (
-            <BedItem bed={bed} onBedClick={() => handleBedClick(bed)}/>
-          ))
-        }
-      </div>
-    </div>
+    </>
   )
 }
 
