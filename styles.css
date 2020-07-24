@@ -113,3 +113,21 @@
 body {
   background-color: #eee;
 }
+
+/** LoginForm **/
+
+.login-form{
+  display: flex;
+  flex-flow: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.input-feedback {
+  color: rgb(235, 54, 54);
+  font-size: 14px;
+}
+
+input.error {
+  border-color: red;
+}
