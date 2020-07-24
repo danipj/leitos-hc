@@ -2,6 +2,7 @@ module.exports = {
   entry: './app.js',
   output: {
     filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -17,5 +18,8 @@ module.exports = {
         loader: "style-loader!css-loader"
       }
     ]
-  }
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
 };

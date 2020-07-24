@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainPage from "./src/MainPage";
+import App from "./src/App";
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<MainPage />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

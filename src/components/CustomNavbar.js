@@ -27,6 +27,9 @@ const CustomNavbar = (props) => {
             <NavItem>
               <NavLink href="/">Buscar leito</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/login">Login</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
