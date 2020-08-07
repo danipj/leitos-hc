@@ -2,23 +2,30 @@ import React from "react";
 import { Formik } from "formik";
 import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
-const ValidatedLoginForm = () => (
+import { login } from '../api.js';
+
+const ValidatedLoginForm = (props) => (
   <Formik
-    initialValues={{ email: "", password: "" }}
+    initialValues={{ username: "", password: "" }}
     onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        console.log("Logging in", values);
-        setSubmitting(false);
-      }, 500);
+      setSubmitting(true);
+      login(values)
+        .then((res) => {
+          props.onLogin(res.data.access_token);
+        })
+        .catch((e) => {
+          console.log('deu erro');
+          setSubmitting(false);
+        })
     }}
 
     validationSchema={Yup.object().shape({
-      email: Yup.string()
+      username: Yup.string()
         .email()
         .required("Obrigatório"),
       password: Yup.string()
         .required("Senha obrigatória")
-        .min(8, "Senha muito curta - mínimo de 8 caracteres")
+        .min(6, "Senha muito curta - mínimo de 6 caracteres")
         .matches(/(?=.*[0-9])/, "Inclua ao menos um número na sua senha")
     })}
   >
@@ -36,16 +43,16 @@ const ValidatedLoginForm = () => (
         <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="email">Email</label>
           <input
-            name="email"
+            name="username"
             type="text"
             placeholder="Digite seu email"
-            value={values.email}
+            value={values.username}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={errors.email && touched.email && "error"}
+            className={errors.username && touched.username && "error"}
           />
-          {errors.email && touched.email && (
-            <div className="input-feedback">{errors.email}</div>
+          {errors.username && touched.username && (
+            <div className="input-feedback">{errors.username}</div>
           )}
           <label htmlFor="email">Senha</label>
           <input

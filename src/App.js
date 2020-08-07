@@ -12,14 +12,14 @@ export default function App() {
   return (
     <Router>
         <Switch>
-          <Route path="/login">
-            <LoginPage />
+          <Route path="/main">
+            <MainPage />
           </Route>
           <Route path="/users">
             <>teste</>
           </Route>
           <Route path="/">
-            <MainPage />
+            <LoginPage />
           </Route>
         </Switch>
     </Router>
