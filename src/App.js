@@ -12,15 +12,8 @@ export default function App() {
   return (
     <Router>
         <Switch>
-          <Route path="/main">
-            <MainPage />
-          </Route>
-          <Route path="/users">
-            <>teste</>
-          </Route>
-          <Route path="/">
-            <LoginPage />
-          </Route>
+          <Route path="/main" component={MainPage}/>
+          <Route path="/" component={LoginPage}/>
         </Switch>
     </Router>
   );

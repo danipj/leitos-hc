@@ -22,7 +22,7 @@ const CustomNavbar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Buscar paciente</NavLink>
+              <NavLink href="/main/patientSearch">Buscar paciente</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/">Buscar leito</NavLink>
