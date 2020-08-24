@@ -131,3 +131,26 @@ body {
 input.error {
   border-color: red;
 }
+
+.patient-search-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.patient-buttons-container {
+  margin-left: auto;
+}
+
+.patient-button {
+  margin-left: 10px;
+}
+
+.no-patient-warning {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -17,7 +17,7 @@ const CustomNavbar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Mapa de Leitos</NavbarBrand>
+        <NavbarBrand href="/main">Mapa de Leitos</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
